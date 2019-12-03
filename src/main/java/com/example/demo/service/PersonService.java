@@ -18,8 +18,12 @@ public class PersonService {
 
     private final PersonDao personDao;
 
+    /**
+     *
+     * @param personDao the repository whose identifier equal to qualifier
+     */
     @Autowired
-    public PersonService(@Qualifier("fakeDao") PersonDao personDao) {
+    public PersonService(@Qualifier("realDao") PersonDao personDao) {
         this.personDao = personDao;
     }
 
